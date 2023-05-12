@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from matplotlib import use
 from .models import User
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse

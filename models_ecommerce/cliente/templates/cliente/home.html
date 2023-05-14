@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+</head>
+<body>
+  <h1>Olá {{ cliente.nome }}</h1>
+  {% for p in produtos %}
+    <div>
+      <h2>{{ p.nome }}</h2>
+      <p>preço: {{ p.price }}</p>
+      <p>descrição do produto: {{ p.descricao }}</p>
+    </div>
+  {% endfor %}
+  <a href="{% url 'carrinho:create' pk=cliente.pk %}">criar um carrinho</a>
+  <a href="{% url 'produto:index' %}">cadastrar produto</a>
+</body>
+</html>

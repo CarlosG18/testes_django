@@ -3,5 +3,5 @@ from . import views
 
 app_name = "carrinho"
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('create/<int:pk>/', views.create, name="create"),
 ]

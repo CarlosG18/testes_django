@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Produto</title>
+</head>
+<body>
+  <h1>Criando Produto</h1>
+  
+  <form action="{% url 'produto:save' %}" method="POST">
+    {% csrf_token %}
+    <label for="cod">codigo</label>
+    <br>
+    <input id="cod" name="codigo" type="number">
+    <br>
+    <label for="nome">nome</label>
+    <input id="nome" name="nome" type="text">
+    <br>
+    <label for="price">preço</label>
+    <input type="text" pattern="^\d+(?:\.\d{1,2})?$" name="price" id="preco">
+
+    <br>
+    <label for="des">descrição do produto</label>
+    <input id="des" name="descricao" type="areatext">
+    <input type="submit">
+  </form>
+  
+  <a href="{% url 'cliente:index' %}">voltar para home</a>
+</body>
+</html>

@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'carrinho.apps.CarrinhoConfig',
+    'cliente.apps.ClienteConfig',
+    'produto.apps.ProdutoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
